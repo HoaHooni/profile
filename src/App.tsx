@@ -7,7 +7,7 @@ import Resume from "./Components/Resume";
 import Contact from "./Components/Contact";
 import Portfolio from "./Components/Portfolio";
 interface IApp {
-  main: {};
+  user: {};
   resume: object;
   portfolio: object;
 }
@@ -38,12 +38,12 @@ const App: React.FC = (props) => {
   return (
     <>
       <div className="App">
-        <Header data={resumeData.main} />
-        <About data={resumeData.main} />
+        <Header data={resumeData.user} />
+        <About data={resumeData.user} />
         <Resume data={resumeData.resume} />
         <Portfolio data={resumeData.portfolio} />
-        <Contact data={resumeData.main} />
-        <Footer data={resumeData.main} />
+        <Contact data={resumeData.user} />
+        <Footer data={resumeData.user} />
       </div>
     </>
   );

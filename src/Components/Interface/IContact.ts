@@ -6,10 +6,8 @@ interface IContact {
 }
 
 interface IAddress {
-    state: string;
     city: string;
     street: string;
-    zip: string;
     country: string;
 }
 

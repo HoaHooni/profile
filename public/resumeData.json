@@ -1,23 +1,22 @@
 {
-  "main": {
+  "user": {
     "name":"Hooni Nguyen",
     "description":"I am a web development engineer and I use react and vue.js to develop pages. This project is a resume template that can be used as the project home page or resume page",
     "image":"images/hooni.jpg",
     "bio":"Use this bio section as your way of describing yourself and saying what you do, what technologies you like to use or feel most comfortable with, describing your personality, or whatever else you feel like throwing in.",
-    "contactmessage":"Here is where you should write your message to readers to have them get in contact with you.",
+    "contactMessage":"Here is where you should write your message to readers to have them get in contact with you.",
     "email": "ndhoa15@gmail.com",
     "phone": "0866822615",
     "github":"https://github.com/nordicgiant2/react-nice-resume",
     "project":"https://github.com/nordicgiant2/react-nice-resume",
+    "facebook": "",
+    "linkedin": "",
     "address":{
       "street": "",
       "city":"HaNoi",
-      "country": "VietNam",
-      "state":"(Your State)",
-      "zip": "(Your Zip/Postal Code)"
+      "country": "VietNam"
     },
     "website": "http://www.timbakerdev.com",
-    "resumedownload":"http://timbakerdev.com",
     "social":[
       {
         "name":"facebook",

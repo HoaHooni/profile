@@ -9,7 +9,7 @@ const Contact: React.FC<Props> = (props) => {
   if (!props.data) return null;
 
   const { name, address, phone, message } = props.data as IContact
-  const { street, city, state, country } = address
+  const { street, city, country } = address
 
   const handleChange = () => {
     console.log("click")
