@@ -58,7 +58,7 @@ const Header: React.FC<Props> = (props) => {
       <div className="row banner">
         <div className="banner-text">
           <div className="image">
-            <img src={image}>
+            <img src={image} alt="">
             </img>
           </div>
           <h1 className="responsive-headline">I'm {name}</h1>
