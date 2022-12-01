@@ -1,5 +1,5 @@
 import React from "react";
-import IContact from './Interface/IContact'
+import IContact from './interface/IContact'
 
 type Props = {
   data: IContact | {};

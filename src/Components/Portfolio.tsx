@@ -1,6 +1,6 @@
 import React from "react";
 import Zmage from "react-zmage";
-import IPortfolio from './Interface/IPortfolio'
+import IPortfolio from './interface/IPortfolio'
 
  type Props = {
     data: IPortfolio | {};

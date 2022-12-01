@@ -1,5 +1,5 @@
 import React from "react";
-import IResume from './Interface/IResume'
+import IResume from './interface/IResume'
 
 type Props = {
   data: IResume | {};
