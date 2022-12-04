@@ -6,44 +6,47 @@ import About from "./components/About";
 import Resume from "./components/Resume";
 import Contact from "./components/Contact";
 import Portfolio from "./components/Portfolio";
+import { getProfile } from './service/Service'
+import IProjects from "./components/interface/IProjects";
+import IResume from "./components/interface/IResume";
 interface IApp {
-  user: {};
-  resume: object;
-  portfolio: object;
+  infor: {};
+  resume: IResume;
+  projects: IProjects[] | [];
 }
 
-const App: React.FC = (props) => {
+const App: React.FC = () => {
 
   const [resumeData, setResumeData] = useState<IApp>({} as IApp);
-  const getResumeData = () => {
-    $.ajax({
-      url: "./resumeData.json",
-      dataType: "json",
-      cache: false,
-      success: function (data) {
-        setResumeData(data);
-      },
-      error: function (xhr, status, err) {
-        console.log(err);
-        alert(err);
-      }
-    });
+  const getResumeData = async () => {
+    // $.ajax({
+    //   url: "./resumeData.json",
+    //   dataType: "json",
+    //   cache: false,
+    //   success: function (data) {
+    //     setResumeData(data);
+    //   },
+    //   error: function (xhr, status, err) {
+    //     console.log(err);
+    //     alert(err);
+    //   }
+    // });
+    setResumeData(await getProfile<IApp>("1", {}));
   }
 
   useEffect(() => {
     getResumeData();
-
   }, [])
 
   return (
     <>
       <div className="App">
-        <Header data={resumeData.user} />
-        <About data={resumeData.user} />
+        <Header data={resumeData.infor} />
+        <About data={resumeData.infor} />
         <Resume data={resumeData.resume} />
-        <Portfolio data={resumeData.portfolio} />
-        <Contact data={resumeData.user} />
-        <Footer data={resumeData.user} />
+        <Portfolio data={resumeData.projects} />
+        <Contact data={resumeData.infor} />
+        <Footer data={resumeData.infor} />
       </div>
     </>
   );

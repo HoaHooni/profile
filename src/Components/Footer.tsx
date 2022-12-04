@@ -1,14 +1,14 @@
 import React from "react";
 import IFooter from "./interface/IFooter";
 type Props = {
-  data : IFooter | {};
+  data: IFooter | {};
 }
 
-const Footer:React.FC<Props> = (props) => {
-  const data  = props.data as IFooter
+const Footer: React.FC<Props> = (props) => {
+  const data = props.data as IFooter
   if (!props.data) return null;
 
-  const networks = data.social.map(function (network) {
+  const networks = data.socials.map(function (network) {
     return (
       <li key={network.name}>
         <a href={network.url}>

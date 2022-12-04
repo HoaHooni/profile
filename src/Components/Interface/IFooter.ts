@@ -1,5 +1,5 @@
 interface IFooter {
-    social: INetWork[];
+    socials: INetWork[];
 }
 
 interface INetWork {

@@ -2,10 +2,10 @@ import React from "react";
 import IResume from './interface/IResume'
 
 type Props = {
-  data: IResume | {};
+  data: IResume;
 }
 
-const Resume:React.FC<Props> = (props) => {
+const Resume: React.FC<Props> = (props) => {
   // const getRandomColor = () => {
   //   let letters = "0123456789ABCDEF";
   //   let color = "#";
@@ -18,8 +18,8 @@ const Resume:React.FC<Props> = (props) => {
   if (!props.data) return null;
 
   const data = props.data as IResume;
-  const {skillmessage} = props.data as IResume;
-  const education = data.education.map(function (education) {
+  const { skillmessage } = props.data as IResume;
+  const education = data.educations.map(function (education) {
     return (
       <div key={education.school}>
         <h3>{education.school}</h3>
@@ -32,7 +32,7 @@ const Resume:React.FC<Props> = (props) => {
     );
   });
 
-  const work = data.work.map(function (work) {
+  const work = data.works.map(function (work) {
     return (
       <div key={work.company}>
         <h3>{work.company}</h3>
@@ -101,6 +101,6 @@ const Resume:React.FC<Props> = (props) => {
     </section>
   );
 
-}
+};
 
 export default Resume;

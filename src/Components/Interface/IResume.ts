@@ -1,11 +1,11 @@
 interface IResume {
-    skillmessage: string,
-    education: IEducation[];
-    work: IWork[];
-    skills: ISkills[];
+    skillmessage: string | "",
+    educations: IEducation[] | [];
+    works: IWork[] | [];
+    skills: ISkills[] | [];
 }
 
-interface IEducation {
+type IEducation = {
     school: string;
     degree: string;
     graduated: string;
