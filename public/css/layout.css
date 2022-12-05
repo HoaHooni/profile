@@ -65,6 +65,7 @@ header .banner .image {
    max-width: 22rem;
    max-height: 22rem;
 }
+
 header .banner .image img {
    position: relative;
    width: 120px;
@@ -380,7 +381,7 @@ ul#nav li.current a {
    position: relative;
    margin-bottom: 60px;
    background: rgb(224, 221, 221);
-   height:20px;
+   height: 20px;
    border-radius: 60px;
 }
 
@@ -403,8 +404,8 @@ ul#nav li.current a {
    padding-right: 24px;
    background: #6fbbfa;
    display: inline-block;
-   height:20px;
-   
+   height: 20px;
+
    line-height: 20px;
    /* border-top-right-radius: 60px;
    border-bottom-right-radius: 60px; */
@@ -527,7 +528,7 @@ ul#nav li.current a {
    background: #fff;
    overflow: hidden;
    position: relative;
-
+   cursor: pointer;
    -webkit-transition: all 0.3s ease-in-out;
    -moz-transition: all 0.3s ease-in-out;
    -o-transition: all 0.3s ease-in-out;

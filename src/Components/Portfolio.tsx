@@ -1,6 +1,7 @@
 import React from "react";
-import Zmage from "react-zmage";
-import IProjects from './interface/IProjects'
+import IProjects from './interface/IProjects';
+import { Fade } from "react-reveal";
+import Project from "./Project";
 
 type Props = {
   data: IProjects[] | [];
@@ -11,41 +12,32 @@ const Portfolio: React.FC<Props> = (props) => {
   const data = props.data as IProjects[];
   if (!data) return null;
 
-  const projects = data.map(function (projects) {
-    let projectImage = "images/portfolio/" + projects.image;
+  const projects = data.map(function (project) {
 
     return (
       <div key={id++} className="columns portfolio-item">
-        {/* <div className="item-wrap">
-          <Zmage alt={projects.title} src={projectImage} />
-          <div style={{ textAlign: "center" }}>{projects.title}</div>
-        </div> */}
-        <div className="grid-item apps wow zoomIn">
-          <div className="img-place" data-src={projectImage} data-fancybox data-caption="<h5 class='fg-theme'>Mobile Travel App</h5> <p>Travel, Discovery</p>">
-            <img src={projectImage} alt="" />
-            <div className="img-caption">
-              <h5 className="fg-theme">{projects.title}</h5>
-              <p>{projects.category}</p>
-            </div>
-          </div></div>
-      </div >
+        <Project data={project} />
+      </div>
     );
   });
 
   return (
     <section id="portfolio">
-      <div className="row">
-        <div className="twelve columns collapsed">
-          <h1>PROJECT LIST</h1>
+      <Fade left duration={1000} distance="40px">
+        <div className="row">
+          <div className="twelve columns collapsed">
+            <h1>PROJECT LIST</h1>
 
-          <div
-            id="portfolio-wrapper"
-            className="bgrid-quarters s-bgrid-thirds cf"
-          >
-            {projects}
+            <div
+              id="portfolio-wrapper"
+              className="bgrid-thirds cf"
+            >
+              {projects}
+            </div>
           </div>
         </div>
-      </div>
+      </Fade>
+
     </section>
   );
 
