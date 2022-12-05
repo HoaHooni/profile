@@ -17,7 +17,7 @@
       "country": "VietNam"
     },
     "website": "http://www.timbakerdev.com",
-    "social": [
+    "socials": [
       {
         "name": "facebook",
         "url": "https://github.com/nordicgiant2/react-nice-resume",
@@ -47,7 +47,7 @@
   },
   "resume": {
     "skillmessage": "I have 3 years of experience in software development.",
-    "education": [
+    "educations": [
       {
         "school": "Ha Noi University of Industry",
         "degree": "Information Technology",
@@ -55,7 +55,7 @@
         "description": "GPA: 2.7"
       }
     ],
-    "work": [
+    "works": [
       {
         "company": "CMC global",
         "title": "Developer",

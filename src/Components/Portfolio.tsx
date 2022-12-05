@@ -16,11 +16,19 @@ const Portfolio: React.FC<Props> = (props) => {
 
     return (
       <div key={id++} className="columns portfolio-item">
-        <div className="item-wrap">
+        {/* <div className="item-wrap">
           <Zmage alt={projects.title} src={projectImage} />
           <div style={{ textAlign: "center" }}>{projects.title}</div>
-        </div>
-      </div>
+        </div> */}
+        <div className="grid-item apps wow zoomIn">
+          <div className="img-place" data-src={projectImage} data-fancybox data-caption="<h5 class='fg-theme'>Mobile Travel App</h5> <p>Travel, Discovery</p>">
+            <img src={projectImage} alt="" />
+            <div className="img-caption">
+              <h5 className="fg-theme">{projects.title}</h5>
+              <p>{projects.category}</p>
+            </div>
+          </div></div>
+      </div >
     );
   });
 
