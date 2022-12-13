@@ -6,7 +6,6 @@ import About from "./components/About";
 import Resume from "./components/Resume";
 import Contact from "./components/Contact";
 import Portfolio from "./components/Portfolio";
-// import { getProfile } from './service/Service'
 import IProjects from "./components/interface/IProjects";
 import IResume from "./components/interface/IResume";
 interface IApp {
@@ -53,3 +52,4 @@ const App: React.FC = () => {
 }
 
 export default App;
+

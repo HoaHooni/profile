@@ -1,6 +1,5 @@
-import { Avatar, Button, Card } from 'antd';
+import { Avatar, Button, Card, Timeline } from 'antd';
 import Modal from 'antd/es/modal/Modal';
-import { SearchOutlined } from '@ant-design/icons';
 import React, { useState } from 'react'
 import IProjects from './interface/IProjects';
 import Meta from 'antd/es/card/Meta';
@@ -9,9 +8,31 @@ type Props = {
 }
 const Project: React.FC<Props> = (props) => {
     const data = props.data as IProjects;
-    let projectImage = "images/portfolio/" + data.image;
+    let projectImage = "images/portfolio/" + data.thumbnail;
     const [loading, setLoading] = useState(false);
     const [open, setOpen] = useState(false);
+
+    const Footer = ({ url }: { url?: string }) => {
+        return (
+            <div>
+                <Button key="back" onClick={handleCancel}>
+                    Return
+                </Button>
+                <Button key="submit" type="primary" loading={loading} onClick={handleOk}>
+                    Submit
+                </Button>
+                {url ? <Button
+                    key="live"
+                    type="primary"
+                    loading={loading}
+                    onClick={() => handleLiveDemo(url)}
+                >
+                    Live Demo
+                </Button> : ""}
+            </div>
+        )
+    }
+
 
     const showModal = () => {
         setOpen(true);
@@ -29,6 +50,13 @@ const Project: React.FC<Props> = (props) => {
         setOpen(false);
     };
 
+    const handleLiveDemo = (url?: string) => {
+        if (url) {
+            window.open(url, "_blank");
+        }
+        setOpen(false);
+    };
+
     return (
         <>
             <div className="item-wrap" onClick={showModal}>
@@ -36,7 +64,7 @@ const Project: React.FC<Props> = (props) => {
                     <Meta
                         avatar={<Avatar src={projectImage} style={{ marginTop: "5px" }} />}
                         title={data.title}
-                        description={data.category}
+                        description={data.shortDescription}
                     />
                 </Card>
             </div>
@@ -44,29 +72,18 @@ const Project: React.FC<Props> = (props) => {
             <Modal
                 open={open}
                 title={data.title}
-                // onOk={handleOk}
-                width="50%"
+                width="60%"
                 onCancel={handleCancel}
-                footer={[
-                    <Button key="back" onClick={handleCancel} icon={<SearchOutlined />}>
-                        Return
-                    </Button>,
-                    <Button key="submit" type="primary" loading={loading} onClick={handleOk}>
-                        Submit
-                    </Button>,
-                    <Button
-                        key="link"
-                        href="https://google.com"
-                        type="primary"
-                        loading={loading}
-                        onClick={handleOk}
-                    >
-                        Search on Google
-                    </Button>,
-                ]}
+                footer={<Footer url={data.url} />}
             >
-                <p>Some contents...</p>
-                <img alt={data.title} src={projectImage} />
+                {data.description}
+
+                <Timeline mode='left' style={{ paddingRight: "50%", paddingTop: "2rem" }}>
+                    <Timeline.Item label="responsible">{data.responsible}</Timeline.Item>
+                    <Timeline.Item label="languages">{data.languages}</Timeline.Item>
+                    <Timeline.Item label="tools">{data.tools}</Timeline.Item>
+                    <Timeline.Item label="other">{data.other}</Timeline.Item>
+                </Timeline>
             </Modal>
         </>
     )

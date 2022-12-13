@@ -92,79 +92,186 @@
       }
     ]
   },
-
   "projects": [
     {
       "title": "Canadian Wanderlust",
       "category": "My Travel Blog for my post-university travels",
-      "image": "01.jpg",
-      "url": "https://www.canadianwanderlust.com"
+      "thumbnail": "01.jpg",
+      "url": "https://www.canadianwanderlust.com",
+      "description": "I am a web development engineer and I use react and vue.js to develop pages. This project is a resume template that can be used as the project home page or resume page",
+      "shortDescription": "lorentry for my post-university",
+      "teamSize": 3,
+      "responsible": "string",
+      "languages": "string",
+      "tools": "tools...",
+      "other": "string",
+      "fromDate": "1667515710",
+      "toDate": "1670971710"
     },
     {
       "title": "Fury Fighting Gear",
       "category": "(offline now) A fighting gear company I started",
-      "image": "02.jpg",
-      "url": "http://www.timbakerdev.com"
+      "thumbnail": "02.jpg",
+      "url": "http://www.timbakerdev.com",
+      "description": "string",
+      "shortDescription": "string",
+      "teamSize": 3,
+      "responsible": "string",
+      "languages": "string",
+      "tools": "tools...",
+      "other": "string",
+      "fromDate": "1667515710",
+      "toDate": "1670971710"
     },
     {
       "title": "Original Thai Food",
       "category": "Website I built for a restaurant I like in Thailand",
-      "image": "03.jpg",
-      "url": "http://www.timbakerdev.com/originalthaifood.github.io"
+      "thumbnail": "03.jpg",
+      "url": "http://www.timbakerdev.com/originalthaifood.github.io",
+      "description": "string",
+      "shortDescription": "string",
+      "teamSize": 3,
+      "responsible": "string",
+      "languages": "string",
+      "tools": "tools...",
+      "other": "string",
+      "fromDate": "1667515710",
+      "toDate": "1670971710"
     },
     {
       "title": "Resume Website",
       "category": "A React based resume website template",
-      "image": "04.jpg",
-      "url": "http://www.timbakerdev.com"
+      "thumbnail": "04.jpg",
+      "url": "http://www.timbakerdev.com",
+      "description": "string",
+      "shortDescription": "string",
+      "teamSize": 3,
+      "responsible": "string",
+      "languages": "string",
+      "tools": "tools...",
+      "other": "string",
+      "fromDate": "1667515710",
+      "toDate": "1670971710"
     },
     {
       "title": "Smirkspace",
       "category": "(MVP Only) A React and Meteor based chat University project.",
-      "image": "05.jpg",
-      "url": "http://www.smirkspace.com"
+      "thumbnail": "05.jpg",
+      "url": "http://www.smirkspace.com",
+      "description": "string",
+      "shortDescription": "string",
+      "teamSize": 3,
+      "responsible": "string",
+      "languages": "string",
+      "tools": "tools...",
+      "other": "string",
+      "fromDate": "1667515710",
+      "toDate": "1670971710"
     },
     {
       "title": "Canadian Wanderlust",
       "category": "My Travel Blog for my post-university travels",
-      "image": "06.jpg",
-      "url": "https://www.canadianwanderlust.com"
+      "thumbnail": "06.jpg",
+      "url": "https://www.canadianwanderlust.com",
+      "description": "string",
+      "shortDescription": "string",
+      "teamSize": 3,
+      "responsible": "string",
+      "languages": "string",
+      "tools": "tools...",
+      "other": "string",
+      "fromDate": "1667515710",
+      "toDate": "1670971710"
     },
     {
       "title": "Fury Fighting Gear",
       "category": "(offline now) A fighting gear company I started",
-      "image": "01.jpg",
-      "url": "http://www.timbakerdev.com"
+      "thumbnail": "01.jpg",
+      "url": "http://www.timbakerdev.com",
+      "description": "string",
+      "shortDescription": "string",
+      "teamSize": 3,
+      "responsible": "string",
+      "languages": "string",
+      "tools": "tools...",
+      "other": "string",
+      "fromDate": "1667515710",
+      "toDate": "1670971710"
     },
     {
       "title": "Original Thai Food",
       "category": "Website I built for a restaurant I like in Thailand",
-      "image": "02.jpg",
-      "url": "http://www.timbakerdev.com/originalthaifood.github.io"
+      "thumbnail": "02.jpg",
+      "url": "http://www.timbakerdev.com/originalthaifood.github.io",
+      "description": "string",
+      "shortDescription": "string",
+      "teamSize": 3,
+      "responsible": "string",
+      "languages": "string",
+      "tools": "tools...",
+      "other": "string",
+      "fromDate": "1667515710",
+      "toDate": "1670971710"
     },
     {
       "title": "Original Thai Food",
       "category": "Website I built for a restaurant I like in Thailand",
-      "image": "03.jpg",
-      "url": "http://www.timbakerdev.com/originalthaifood.github.io"
+      "thumbnail": "03.jpg",
+      "url": "http://www.timbakerdev.com/originalthaifood.github.io",
+      "description": "string",
+      "shortDescription": "string",
+      "teamSize": 3,
+      "responsible": "string",
+      "languages": "string",
+      "tools": "tools...",
+      "other": "string",
+      "fromDate": "1667515710",
+      "toDate": "1670971710"
     },
     {
       "title": "Resume Website",
       "category": "A React based resume website template",
-      "image": "04.jpg",
-      "url": "http://www.timbakerdev.com"
+      "thumbnail": "04.jpg",
+      "url": "http://www.timbakerdev.com",
+      "description": "string",
+      "shortDescription": "string",
+      "teamSize": 3,
+      "responsible": "string",
+      "languages": "string",
+      "tools": "tools...",
+      "other": "string",
+      "fromDate": "1667515710",
+      "toDate": "1670971710"
     },
     {
       "title": "Smirkspace",
       "category": "(MVP Only) A React and Meteor based chat University project.",
-      "image": "05.jpg",
-      "url": "http://www.smirkspace.com"
+      "thumbnail": "05.jpg",
+      "url": "http://www.smirkspace.com",
+      "description": "string",
+      "shortDescription": "string",
+      "teamSize": 3,
+      "responsible": "string",
+      "languages": "string",
+      "tools": "tools...",
+      "other": "string",
+      "fromDate": "1667515710",
+      "toDate": "1670971710"
     },
     {
       "title": "Canadian Wanderlust",
       "category": "My Travel Blog for my post-university travels",
-      "image": "06.jpg",
-      "url": "https://www.canadianwanderlust.com"
+      "thumbnail": "06.jpg",
+      "url": "https://www.canadianwanderlust.com",
+      "description": "string",
+      "shortDescription": "string",
+      "teamSize": 3,
+      "responsible": "string",
+      "languages": "string",
+      "tools": "tools...",
+      "other": "string",
+      "fromDate": "1667515710",
+      "toDate": "1670971710"
     }
   ]
 }
