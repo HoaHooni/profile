@@ -1,0 +1,13 @@
+.project-detail {
+    .header {
+        display: flex;
+
+        .ant-avatar {
+            margin-right: 3rem;
+        }
+
+        &>div:last-child {
+            padding-top: 1rem;
+        }
+    }
+}

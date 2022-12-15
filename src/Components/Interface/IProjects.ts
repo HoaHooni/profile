@@ -10,8 +10,8 @@ interface IProjects {
     languages?: string;
     tools?: string;
     other?: string | React.ReactNode;
-    fromDate?: string;
-    toDate?: string;
+    fromDate?: number;
+    toDate?: number;
 }
 
 export default IProjects;

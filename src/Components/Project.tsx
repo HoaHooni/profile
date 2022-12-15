@@ -3,6 +3,7 @@ import Modal from 'antd/es/modal/Modal';
 import React, { useState } from 'react'
 import IProjects from './interface/IProjects';
 import Meta from 'antd/es/card/Meta';
+import '../scss/project.scss';
 type Props = {
     data: IProjects;
 }
@@ -57,6 +58,15 @@ const Project: React.FC<Props> = (props) => {
         setOpen(false);
     };
 
+    const convertDate = (date?: number) => {
+        if (!date) {
+            return "";
+        }
+        const newDate = new Date(date);
+        console.log("date: ", newDate.toLocaleDateString());
+        return `${newDate.getMonth() + 1}/${newDate.getFullYear()}`;
+    }
+
     return (
         <>
             <div className="item-wrap" onClick={showModal}>
@@ -71,18 +81,27 @@ const Project: React.FC<Props> = (props) => {
 
             <Modal
                 open={open}
-                title={data.title}
+                className="project-detail"
                 width="60%"
                 onCancel={handleCancel}
                 footer={<Footer url={data.url} />}
             >
-                {data.description}
+                <div className="header">
+                    <Avatar src={projectImage} style={{ marginTop: "5px" }} size={80} />
+                    <div>
+                        <h2>{data.title}</h2>
+                        <p> {convertDate(data.fromDate)} - {convertDate(data.toDate)}</p>
+                    </div>
+                </div>
+                <div>
+                    {data.description}
+                </div>
 
                 <Timeline mode='left' style={{ paddingRight: "50%", paddingTop: "2rem" }}>
-                    <Timeline.Item label="responsible">{data.responsible}</Timeline.Item>
-                    <Timeline.Item label="languages">{data.languages}</Timeline.Item>
-                    <Timeline.Item label="tools">{data.tools}</Timeline.Item>
-                    <Timeline.Item label="other">{data.other}</Timeline.Item>
+                    <Timeline.Item label="Responsible">{data.responsible}</Timeline.Item>
+                    <Timeline.Item label="Languages">{data.languages}</Timeline.Item>
+                    <Timeline.Item label="Tools">{data.tools}</Timeline.Item>
+                    <Timeline.Item label="Other">{data.other}</Timeline.Item>
                 </Timeline>
             </Modal>
         </>

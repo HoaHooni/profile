@@ -8,6 +8,7 @@ import Contact from "./components/Contact";
 import Portfolio from "./components/Portfolio";
 import IProjects from "./components/interface/IProjects";
 import IResume from "./components/interface/IResume";
+import { getProfile } from "./service/Service";
 interface IApp {
   infor: {};
   resume: IResume;
@@ -18,19 +19,19 @@ const App: React.FC = () => {
 
   const [resumeData, setResumeData] = useState<IApp>({} as IApp);
   const getResumeData = async () => {
-    $.ajax({
-      url: "./resumeData.json",
-      dataType: "json",
-      cache: false,
-      success: function (data) {
-        setResumeData(data);
-      },
-      error: function (xhr, status, err) {
-        console.log(err);
-        alert(err);
-      }
-    });
-    // setResumeData(await getProfile<IApp>("1", {}));
+    // $.ajax({
+    //   url: "./resumeData.json",
+    //   dataType: "json",
+    //   cache: false,
+    //   success: function (data) {
+    //     setResumeData(data);
+    //   },
+    //   error: function (xhr, status, err) {
+    //     console.log(err);
+    //     alert(err);
+    //   }
+    // });
+    setResumeData(await getProfile<IApp>("1", {}));
   }
 
   useEffect(() => {
