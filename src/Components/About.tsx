@@ -1,5 +1,5 @@
 import React from "react";
-import IAbout from './interface/IAbout'
+import IAbout from './Interface/IAbout'
 
 interface Props {
   data: IAbout | {};

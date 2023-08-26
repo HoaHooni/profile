@@ -1,5 +1,5 @@
 import React from "react";
-import IHeader from './interface/IHeader'
+import IHeader from './Interface/IHeader'
 
 
 type Props = {

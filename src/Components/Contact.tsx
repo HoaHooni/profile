@@ -1,5 +1,5 @@
 import React from "react";
-import IContact from './interface/IContact';
+import IContact from './Interface/IContact';
 import { Fade, Slide } from "react-reveal";
 
 type Props = {

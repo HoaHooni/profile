@@ -1,5 +1,5 @@
 import React from "react";
-import IFooter from "./interface/IFooter";
+import IFooter from "./Interface/IFooter";
 type Props = {
   data: IFooter | {};
 }
